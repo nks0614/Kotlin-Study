@@ -11,12 +11,6 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        nextButton.setOnClickListener{
-            val intent = Intent(this, ThirdActivity::class.java)
-            intent.putExtra("Info_name",name.text.toString())
-            intent.putExtra("Info_school",school.text.toString())
-            intent.putExtra("Info_number",number.text.toString())
-            startActivity(intent)
-        }
+
     }
 }

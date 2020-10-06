@@ -10,8 +10,5 @@ class ThirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
 
-        name_text.text = intent.getStringExtra("Info_name")
-        school_text.text = intent.getStringExtra("Info_school")
-        number_text.text = intent.getStringExtra("Info_number")
     }
 }

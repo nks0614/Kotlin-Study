@@ -7,97 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/what"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="오늘 뭐 먹을까"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/select"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/edit1"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="입력해라"
-        android:selectAllOnFocus="true"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/what"
-        app:layout_constraintBottom_toTopOf="@+id/edit2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <EditText
-        android:id="@+id/edit2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="입력해라"
-        android:selectAllOnFocus="true"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/edit1"
-        app:layout_constraintBottom_toTopOf="@+id/edit3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <EditText
-        android:id="@+id/edit3"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="입력해라"
-        android:selectAllOnFocus="true"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/edit2"
-        app:layout_constraintBottom_toTopOf="@+id/result"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="결과"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/select"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit3" />
-
-    <Button
-        android:id="@+id/select"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="select"
+        android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/restart"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/what" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:menu="@menu/bottom_navigation" />
 
-    <Button
-        android:id="@+id/restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="restart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@+id/select"
-        app:layout_constraintTop_toBottomOf="@+id/what"
-        app:layout_constraintVertical_bias="0.601" />
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/intent_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="다른 화면"
-        app:layout_constraintTop_toBottomOf="@+id/restart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
