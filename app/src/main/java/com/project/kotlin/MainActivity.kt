@@ -1,12 +1,14 @@
 package com.project.kotlin
 
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.project.kotlin.Fragment.FirstFragment
 import com.project.kotlin.Fragment.SecondFragment
 import com.project.kotlin.Fragment.ThirdFragment
+import com.project.simplecode.spStringSimilarity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         navigationView.setOnNavigationItemSelectedListener(ItemSelectedListener())
     }
+
 
     inner class ItemSelectedListener : BottomNavigationView.OnNavigationItemSelectedListener{
         override fun onNavigationItemSelected(item: MenuItem): Boolean {
