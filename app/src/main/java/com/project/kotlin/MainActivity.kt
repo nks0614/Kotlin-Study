@@ -8,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.project.kotlin.Fragment.FirstFragment
 import com.project.kotlin.Fragment.SecondFragment
 import com.project.kotlin.Fragment.ThirdFragment
+import com.project.simplecode.spDateFormat
 import com.project.simplecode.spStringSimilarity
 import kotlinx.android.synthetic.main.activity_main.*
 
