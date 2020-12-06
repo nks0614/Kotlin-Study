@@ -1,15 +1,12 @@
 package com.project.kotlin
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.project.kotlin.Fragment.FirstFragment
-import com.project.kotlin.Fragment.SecondFragment
-import com.project.kotlin.Fragment.ThirdFragment
-import com.project.simplecode.spDateFormat
-import com.project.simplecode.spStringSimilarity
+import com.project.kotlin.fragment.FirstFragment
+import com.project.kotlin.fragment.SecondFragment
+import com.project.kotlin.fragment.ThirdFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 

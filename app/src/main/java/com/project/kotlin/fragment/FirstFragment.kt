@@ -1,4 +1,4 @@
-package com.project.kotlin.Fragment
+package com.project.kotlin.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -23,7 +23,6 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
 
         moveBtn.setOnClickListener {
