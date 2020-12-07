@@ -9,18 +9,13 @@ import kotlinx.coroutines.*
 import java.lang.Thread.sleep
 import kotlin.coroutines.CoroutineContext
 
-class ThirdActivity : AppCompatActivity(), CoroutineScope {
+class ThirdActivity : AppCompatActivity(){
 
-    lateinit var job : Job
-
-    override val coroutineContext: CoroutineContext
-        get() = Dispatchers.Main + job
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
 
-        job = Job()
 
 //        Log.d("Coroutine", "doing something in main thread")    // 1
 //
@@ -67,7 +62,7 @@ class ThirdActivity : AppCompatActivity(), CoroutineScope {
 //        }
 
         // GlobalScope는 앱이 종료될 때까지 돈다. 근데 이러한 작업은 불필요할 수 있다.
-        // Activity 자체를 Scope로 할 수 있다. 위로 가보자
+        // Activity 자체를 Scope로 할 수 있다.
 
         // 코루틴에서 예외 처리 하는 법
 //        val handler = CoroutineExceptionHandler { coroutineScope, exception ->
@@ -91,6 +86,22 @@ class ThirdActivity : AppCompatActivity(), CoroutineScope {
 //            }
 //        }
 
+        val scope = CoroutineScope(Dispatchers.Main)
+
+        scope.launch {
+            val job1 : Job = launch {
+                for(i in 0..10){
+                    delay(100)
+                    Log.d("Coroutine", "$i 번째")
+                }
+            }
+
+            job1.join()
+            Log.d("Coroutine", "TEST job.join()")
+
+
+        }
+
 
     }
 
@@ -103,8 +114,4 @@ class ThirdActivity : AppCompatActivity(), CoroutineScope {
 //        }
 //    }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        job.cancel()
-    }
 }
