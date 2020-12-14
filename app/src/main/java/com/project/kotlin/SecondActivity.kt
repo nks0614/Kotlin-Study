@@ -17,8 +17,6 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-
-
         date.text = spDateFormat("YYYY년 MM월 dd일", 0)
 
         prevBtn.setOnClickListener {

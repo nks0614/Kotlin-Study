@@ -24,6 +24,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         moveBtn.setOnClickListener {
             spfIntentNoFin(ThirdActivity::class.java)
         }
