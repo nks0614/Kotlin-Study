@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:repeatCount="infinite"
+    android:duration="4000"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:fromDegrees="0"
+    android:toDegrees="360">
+    <!--
+    interpolator 설정 :
+    linear : 애니메이션 변화속도가 일정하다
+    accelerate : 처음엔 느리다가 빨라진다
+    decelerate : 처음엔 빠르다가 느려진다
+    accelerate_decelerate : 과속했다가 급정거
+    overshoot : 마지막 부분에서 더 갔다가 되돌아옴
+    bounce : 마지막 부분에서 걸리듯이 튐
+    cycle : 끝까지 갔다가 다시 처음으로 되돌아옴
+
+    repeatCount :
+    추가 반복 횟수를 넣어주시면 됩니다. defualt는 0입니다. 끈임없이 동작 시키고자 한다면 infinite
+
+    duration :
+    동작시간입니다 1000이면 1초고 4000이면 4초 동안 동작합니다.
+
+    pivotX,Y :
+    기준점을 정해줍니다. default는 view의 좌측상단입니다. 50%, 50%는 중앙
+
+    fromDegrees, toDegrees :
+    시작 방향과 끝 방향을 결정 0 ~ 360은 시계 방향
+    -->
+</rotate>
