@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.project.kotlin.R
-import com.project.kotlin.SecondActivity
-import com.project.kotlin.ThirdActivity
-import com.project.simplecode.spfIntentNoFin
-import kotlinx.android.synthetic.main.fragment_second.*
+import io.reactivex.rxjava3.annotations.NonNull
+import io.reactivex.rxjava3.core.Observable
+
 
 class SecondFragment : Fragment() {
 
@@ -24,9 +23,12 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        moveBtn.setOnClickListener {
-            spfIntentNoFin(ThirdActivity::class.java)
-        }
+//        val source = Observable.create { emitter: ObservableEmitter<String?> ->
+//            emitter.onNext("Hello")
+//            emitter.onNext("Yena")
+//            emitter.onComplete()
+//        }
+//        source.subscribe { s: String? -> Log.d("test", s) }
+   
     }
 }
