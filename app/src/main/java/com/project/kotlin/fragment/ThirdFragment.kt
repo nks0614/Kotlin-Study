@@ -3,6 +3,7 @@ package com.project.kotlin.fragment
 import android.os.Bundle
 import android.transition.ChangeBounds
 import android.transition.TransitionManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,11 @@ class ThirdFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val a : ArrayList<Any> = ArrayList()
+        a.add("222")
+        a.add(222)
+        Log.d("tests", a.toString())
 
         val anim : Animation = AnimationUtils.loadAnimation(context, R.anim.mix)
         img.startAnimation(anim)
